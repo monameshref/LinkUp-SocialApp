@@ -13,7 +13,7 @@ export default function Profile() {
                     
                 </Grid>
 
-                <Grid size={{xs:12, sm:9}} sx={{display:"flex", flexDirection:"column", gap:"20px", px:{xs:"30px"}}}>
+                <Grid size={{xs:12, md:8}} sx={{display:"flex", flexDirection:"column", gap:"20px", px:{xs:"30px"}}}>
                     <PostCreation />
                     <Title />
                     <MyPosts />

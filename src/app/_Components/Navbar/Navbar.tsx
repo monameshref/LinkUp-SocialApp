@@ -17,6 +17,8 @@ import { store } from '@/lib/redux/reduxStore';
 import { toast } from 'react-toastify';
 import { clearUserData, getUserData } from '@/lib/redux/authSlice';
 import { useRouter } from 'next/navigation';
+import cookies from 'js-cookie';
+import { setUserToken } from '@/lib/redux/authSlice';
 
 
 
@@ -58,7 +60,11 @@ export default function Navbar() {
 
 
     useEffect(()=> {
+        const userToken = cookies.get("userTokenSocialApp");
+        if (userToken) {
+        dispatch(setUserToken(userToken));
         dispatch(getUserData());
+    }
     },[dispatch]);
 
 
