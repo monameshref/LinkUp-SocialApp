@@ -41,7 +41,7 @@ export default function Title() {
             payload.append("photo", file);
 
             try{
-                const {data} = await axios.put(`${process.env.baseUrl}${process.env.baseUrl}/users/upload-photo`,payload,{
+                const {data} = await axios.put(`${process.env.baseUrl}/users/upload-photo`,payload,{
                     headers:{
                         token: cookie.get("userTokenSocialApp")!,
                     }

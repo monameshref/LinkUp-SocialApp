@@ -9,7 +9,6 @@ import { getUserData } from "@/lib/redux/authSlice";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import Upload from "../Upload/Upload";
-// import Image from "next/image";
 import Loading from "@/app/loading";
 
 
@@ -19,7 +18,7 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 500,
+    width: {xs:350, sm:500},
     bgcolor: 'background.paper',
     border: '1px solid #ddd',
     borderRadius:"20px",
